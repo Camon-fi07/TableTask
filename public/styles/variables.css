@@ -15,6 +15,10 @@ body {
   --colorBackgroundNegative: #e64646;
   --colorBackgroundNegativeHover: #d83e3c;
   --colorBackgroundNegativeActive: #c93633;
+  --colorBackgroundNegativeTint: #faebeb;
+  --colorStrokeNegative: #e64646;
   --colorBackgroundSecondaryAlpha: #0000000a;
   --colorBackgroundContrastSecondaryAlpha: #ffffff33;
+  --colorFieldBackground: #f2f3f5;
+  --colorIconTertiaryAlpha: #0000003d;
 }

@@ -3,6 +3,7 @@
   margin: 0;
   border: 0;
   font-family: 'Roboto', arial, sans-serif;
+  font-size: var(--colorTextPrimary);
 }
 *,
 *:before,
