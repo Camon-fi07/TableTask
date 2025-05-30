@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should match snapshot 1`] = `
+<input
+  class="input inputWithoutIcons"
+  data-testid="input"
+  placeholder="placeholder"
+/>
+`;
+
+exports[`Input should match snapshot with icons 1`] = `
+<input
+  class="input"
+  data-testid="input"
+  placeholder="placeholder"
+/>
+`;
+
+exports[`Input should render 1`] = `
+<input
+  class="input inputWithoutIcons"
+  data-testid="input"
+  placeholder="placeholderr"
+/>
+`;
