@@ -1,0 +1,20 @@
+body {
+  --colorTextPrimary: #000000;
+  --colorTextPrimaryInvariably: #000000;
+  --colorTextSecondary: #818c99;
+  --colorTextContrast: #ffffff;
+  --colorTextContrastThemed: #ffffff;
+  --colorTextAccentThemed: #2688eb;
+  --colorBackgroundAccent: #2688eb;
+  --colorBackgroundAccentThemed: #2688eb;
+  --colorBackgroundAccentTint: #5a9eff;
+  --colorBackgroundAccentThemedHover: #2c7cde;
+  --colorBackgroundAccentThemedActive: #1e6fdb;
+  --colorStrokeAccent: #2688eb;
+  --colorStrokeAccentThemed: #2688eb;
+  --colorBackgroundNegative: #e64646;
+  --colorBackgroundNegativeHover: #d83e3c;
+  --colorBackgroundNegativeActive: #c93633;
+  --colorBackgroundSecondaryAlpha: #0000000a;
+  --colorBackgroundContrastSecondaryAlpha: #ffffff33;
+}
