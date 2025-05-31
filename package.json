@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "mock": "json-server --watch mocks/db.json",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix .",
     "test": "jest",
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.79.0",
+    "@tanstack/react-table": "^8.21.3",
     "axios": "^1.9.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.511.0",

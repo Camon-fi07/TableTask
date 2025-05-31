@@ -1,1 +1,12 @@
-{}
+{
+  "table.student.fullName": "Full name",
+  "table.student.email": "Email",
+  "table.student.phone": "Phone number",
+  "table.student.city": "City",
+  "table.student.university": "University",
+  "table.student.grade": "Grade",
+  "table.student.testScore": "Test score",
+  "table.student.actions.edit": "Edit",
+  "table.student.actions.delete": "Delete",
+  "button.student.create": "Create student"
+}

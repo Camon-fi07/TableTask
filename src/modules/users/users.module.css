@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: block;
+  animation: spin 1s linear infinite;
+  margin-inline: auto;
+}
