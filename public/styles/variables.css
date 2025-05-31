@@ -21,6 +21,8 @@ body {
   --colorStrokeNegative: #e64646;
   --colorBackgroundSecondaryAlpha: #0000000a;
   --colorBackgroundContrastSecondaryAlpha: #ffffff33;
+  --colorBackgroundModal: #ffffff;
+  --colorOverlayPrimary: #00000066;
   --colorFieldBackground: #f2f3f5;
   --colorIconTertiaryAlpha: #0000003d;
 }
