@@ -22,10 +22,14 @@ export const Modal = ({
   useClickOutside(modalRef, onClose);
 
   return (
-    <div className={styles.overlay}>
+    <div data-testid='modal-overlay' className={styles.overlay}>
       <div ref={modalRef} className={clsx(styles.modal, className)} {...props}>
         {children}
-        <button className={styles.closeButton} onClick={onClose}>
+        <button
+          data-testid='close-modal-button'
+          className={styles.closeButton}
+          onClick={onClose}
+        >
           <div className={styles.closeButtonContent}>
             <XIcon />
           </div>
