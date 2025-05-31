@@ -1,7 +1,15 @@
 import { createRoot } from 'react-dom/client';
+import { Toaster } from 'sonner';
 
-import '~/public/styles/index.css';
+import { Providers } from '@/components/Providers/Providers.tsx';
 
 import { App } from './App/App.tsx';
 
-createRoot(document.getElementById('root')!).render(<App />);
+import '~/public/styles/index.css';
+
+createRoot(document.getElementById('root')!).render(
+  <Providers>
+    <Toaster />
+    <App />
+  </Providers>
+);

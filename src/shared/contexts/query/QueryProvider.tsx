@@ -15,7 +15,7 @@ export const QueryProvider = ({ children }: QueryProviderProps) => {
   const [queryClient] = React.useState(
     new QueryClient({
       defaultOptions: {
-        queries: { refetchOnWindowFocus: false, retry: false }
+        queries: { refetchOnWindowFocus: false }
       },
       queryCache: new QueryCache({
         onError: () => {
