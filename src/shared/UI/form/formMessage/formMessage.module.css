@@ -1,0 +1,6 @@
+.message {
+  color: var(--colorTextNegative);
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}

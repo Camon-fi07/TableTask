@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should match snapshot 1`] = `
+<div
+  class="formItem"
+  data-testid="formItem"
+>
+  <label
+    class="label"
+  />
+  <div
+    class="wrapper "
+  >
+    <input
+      class="input inputWithoutIcons"
+    />
+  </div>
+</div>
+`;
+
+exports[`Form should match snapshot with error 1`] = `
+<div
+  class="formItem"
+  data-testid="formItem"
+>
+  <label
+    class="label"
+    for="name"
+  >
+    Label
+  </label>
+  <div
+    class="wrapper error"
+  >
+    <input
+      class="input inputWithoutIcons"
+      id="name"
+    />
+  </div>
+  <span
+    class="message"
+  >
+    Error
+  </span>
+</div>
+`;

@@ -3,6 +3,7 @@ body {
   --colorTextPrimaryInvariably: #000000;
   --colorTextSecondary: #818c99;
   --colorTextSubhead: #6d7885;
+  --colorTextNegative: #e64646;
   --colorTextContrast: #ffffff;
   --colorTextContrastThemed: #ffffff;
   --colorTextAccentThemed: #2688eb;
