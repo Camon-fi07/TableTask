@@ -26,4 +26,7 @@ body {
   --colorFieldBackground: #f2f3f5;
   --colorIconTertiaryAlpha: #0000003d;
   --colorSeparatorPrimaryAlpha: #0000001f;
+  --colorSeparatorPrimary: #d7d8d9;
+  --colorBackgroundSecondaryHover: #f0f2f4;
+  --colorBackgroundSecondaryActive: #dcdde0;
 }

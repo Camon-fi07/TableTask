@@ -1,0 +1,11 @@
+.tableRow {
+  border-bottom: 1px solid var(--colorSeparatorPrimary);
+}
+
+.tableRow:hover {
+  background-color: var(--colorBackgroundSecondaryHover);
+}
+
+.tableSelectedRow {
+  background-color: var(--colorBackgroundSecondaryActive);
+}
