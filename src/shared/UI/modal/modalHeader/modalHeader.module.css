@@ -1,0 +1,7 @@
+.modalHeader {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  border-bottom: 1px solid var(--colorSeparatorPrimaryAlpha);
+}

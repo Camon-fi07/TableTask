@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { ArrowLeftIcon } from 'lucide-react';
 import { useState } from 'react';
 
 import { Modal, ModalProps } from './modal/modal';
+import { ModalContent } from './modalContent/modalContent';
+import { ModalHeader } from './modalHeader/modalHeader';
+import { ModalHeaderTitle } from './modalHeaderTitle/modalHeaderTitle';
 
 const meta: Meta<typeof Modal> = {
   title: 'UI/Modal',
@@ -23,7 +27,15 @@ const TemplateDefault = (args: ModalProps) => {
       <button onClick={() => setIsOpen(!isOpen)}>click me</button>
       {isOpen && (
         <Modal {...args} onClose={() => setIsOpen(!isOpen)}>
-          content
+          <ModalHeader>
+            <ArrowLeftIcon />
+            <ModalHeaderTitle>Заголовок</ModalHeaderTitle>
+          </ModalHeader>
+          <ModalContent>
+            <div>text</div>
+            <div>text</div>
+            <div>text</div>
+          </ModalContent>
         </Modal>
       )}
     </div>
