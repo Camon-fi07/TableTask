@@ -10,6 +10,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
+      data-testid={`button-${mode}-${size}`}
       className={`${className || ''} ${getSizeClassName(size)} ${getModeClassName(mode)} ${styles.wrapper}`}
       {...props}
     />

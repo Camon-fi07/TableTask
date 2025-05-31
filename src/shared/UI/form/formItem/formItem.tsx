@@ -4,5 +4,9 @@ import styles from './formItem.module.css';
 
 export type FormItemProps = React.HTMLAttributes<HTMLSpanElement>;
 export const FormItem = ({ className, ...props }: FormItemProps) => (
-  <div className={clsx(styles.formItem, className)} {...props} />
+  <div
+    data-testid='form-item'
+    className={clsx(styles.formItem, className)}
+    {...props}
+  />
 );

@@ -24,7 +24,9 @@ const TemplateDefault = (args: ModalProps) => {
     <div
       style={{ background: 'rgba(0,0,0,0.5)', width: '100%', height: '100vh' }}
     >
-      <button onClick={() => setIsOpen(!isOpen)}>click me</button>
+      <button data-testid='open-modal' onClick={() => setIsOpen(!isOpen)}>
+        click me
+      </button>
       {isOpen && (
         <Modal {...args} onClose={() => setIsOpen(!isOpen)}>
           <ModalHeader>

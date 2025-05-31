@@ -9,7 +9,10 @@ export const Input = ({
   isError,
   ...props
 }: InputProps) => (
-  <div className={`${styles.wrapper} ${isError ? styles.error : ''}`}>
+  <div
+    data-testid='input-wrapper'
+    className={`${styles.wrapper} ${isError ? styles.error : ''}`}
+  >
     {!!leftIcon && <div className={styles.icon}>{leftIcon}</div>}
     <input
       {...props}

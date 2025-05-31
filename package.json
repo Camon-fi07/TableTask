@@ -12,6 +12,9 @@
     "preview": "vite preview",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
+    "test-storybook": "playwright test -c ./.storybook/playwright.config.ts",
+    "test-storybook:update-snapshots": "playwright test -c ./.storybook/playwright.config.ts --update-snapshots",
+    "test-e2e": "playwright test -c ./playwright.config.ts",
     "build-storybook": "storybook build"
   },
   "lint-staged": {
