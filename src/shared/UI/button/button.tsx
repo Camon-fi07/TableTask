@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import styles from './button.module.css';
 import { ButtonProps } from './button.types';
 import { getModeClassName, getSizeClassName } from './button.utils';
@@ -11,7 +13,12 @@ export const Button = ({
   return (
     <button
       data-testid={`button-${mode}-${size}`}
-      className={`${className || ''} ${getSizeClassName(size)} ${getModeClassName(mode)} ${styles.wrapper}`}
+      className={clsx(
+        className,
+        getSizeClassName(size),
+        getModeClassName(mode),
+        styles.wrapper
+      )}
       {...props}
     />
   );

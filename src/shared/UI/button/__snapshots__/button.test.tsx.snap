@@ -2,7 +2,8 @@
 
 exports[`Button should match snapshot 1`] = `
 <button
-  class=" small primary wrapper"
+  class="small primary wrapper"
+  data-testid="button-primary-small"
 >
   Click me
 </button>
