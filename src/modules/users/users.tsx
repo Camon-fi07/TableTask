@@ -2,7 +2,6 @@ import { flexRender } from '@tanstack/react-table';
 import { Loader2Icon } from 'lucide-react';
 
 import {
-  Button,
   Table,
   TableBody,
   TableCell,
@@ -11,6 +10,7 @@ import {
   TableRow
 } from '@/shared/UI';
 
+import { CreateUserModal } from './components/createUserModal/createUserModal';
 import { useUsers } from './users.hooks';
 import styles from './users.module.css';
 
@@ -19,7 +19,7 @@ export const Users = () => {
 
   return (
     <div className={styles.wrapper}>
-      <Button>Создать пользователя</Button>
+      <CreateUserModal />
       <div>Фильтры</div>
 
       <Table>

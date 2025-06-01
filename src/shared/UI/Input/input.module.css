@@ -3,7 +3,7 @@
   border-radius: 8px;
   background-color: var(--colorFieldBackground);
   overflow: hidden;
-  min-height: 44px;
+  height: 36px;
   display: flex;
 }
 

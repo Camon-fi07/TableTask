@@ -1,12 +1,18 @@
 {
-  "table.student.fullName": "Full name",
-  "table.student.email": "Email",
-  "table.student.phone": "Phone number",
-  "table.student.city": "City",
-  "table.student.university": "University",
-  "table.student.grade": "Grade",
-  "table.student.testScore": "Test score",
-  "table.student.actions.edit": "Edit",
-  "table.student.actions.delete": "Delete",
-  "button.student.create": "Create student"
+  "fullName": "Full name",
+  "email": "Email",
+  "phone": "Phone number",
+  "city": "City",
+  "university": "University",
+  "grade": "Grade",
+  "testScore": "Test score",
+  "button.edit": "Edit",
+  "button.delete": "Delete",
+  "button.user.create": "Create student",
+  "button.create": "Create",
+  "button.cancel": "Cancel",
+  "message.successCreateUser": "User successfully created",
+  "modal.user.create.title": "Create user",
+  "validation.required": "Required",
+  "validation.format": "Invalid value format"
 }

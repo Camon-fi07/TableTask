@@ -18,3 +18,12 @@ interface UsersResponseDto {
   items: UserDto[];
   page: Page;
 }
+
+interface CreateUserRequestDto {
+  fullName: string;
+  email: string;
+  city: string;
+  phoneNumber: string;
+  grade: string;
+  university: string;
+}

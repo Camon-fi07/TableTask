@@ -1,0 +1,36 @@
+import { useState } from 'react';
+
+import { I18nText } from '@/components/I18nText';
+import {
+  Button,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalHeaderTitle
+} from '@/shared/UI';
+
+import { CreateUserForm } from './components/createUserForm/createUserForm';
+
+export const CreateUserModal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <Button onClick={() => setIsOpen(true)}>
+        <I18nText id='button.user.create' />
+      </Button>
+      {isOpen && (
+        <Modal onClose={() => setIsOpen(false)}>
+          <ModalHeader>
+            <ModalHeaderTitle>
+              <I18nText id='modal.user.create.title' />
+            </ModalHeaderTitle>
+          </ModalHeader>
+          <ModalContent>
+            <CreateUserForm onClose={() => setIsOpen(false)} />
+          </ModalContent>
+        </Modal>
+      )}
+    </div>
+  );
+};

@@ -1,4 +1,12 @@
 {
+  "createUser": {
+    "fullName": "ник ник ник",
+    "city": "321",
+    "grade": "3",
+    "email": "422nikitos244@mail.ru",
+    "phoneNumber": "9236091255",
+    "university": "312"
+  },
   "users": {
     "items": [
       {

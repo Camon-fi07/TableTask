@@ -1,12 +1,18 @@
 {
-  "table.student.fullName": "ФИО",
-  "table.student.email": "Email",
-  "table.student.phone": "Телефон",
-  "table.student.city": "Город",
-  "table.student.university": "Университет",
-  "table.student.grade": "Курс",
-  "table.student.testScore": "Результат",
-  "table.student.actions.edit": "Редактировать",
-  "table.student.actions.delete": "Удалить",
-  "button.student.create": "Создать студента"
+  "fullName": "ФИО",
+  "email": "Email",
+  "phone": "Телефон",
+  "city": "Город",
+  "university": "Университет",
+  "grade": "Курс",
+  "testScore": "Результат теста",
+  "button.edit": "Редактировать",
+  "button.delete": "Удалить",
+  "button.user.create": "Создать пользователя",
+  "button.create": "Создать",
+  "button.cancel": "Отмена",
+  "message.successCreateUser": "Пользователь успешно создан",
+  "modal.user.create.title": "Создание пользователя",
+  "validation.required": "Ожидалось значение",
+  "validation.format": "Неверный формат значения"
 }

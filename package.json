@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "mock": "json-server --watch mocks/db.json",
+    "mock": "npx json-server --routes ./mocks/routes.json --watch ./mocks/db.json ",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix .",
     "test": "jest",
@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
     "@tanstack/react-query": "^5.79.0",
     "@tanstack/react-table": "^8.21.3",
     "axios": "^1.9.0",
@@ -68,7 +69,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "json-server": "^1.0.0-beta.3",
+    "json-server": "1.0.0-beta.3",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
     "storybook": "9.0.0",
