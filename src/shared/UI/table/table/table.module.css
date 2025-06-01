@@ -10,5 +10,5 @@
   width: 100%;
   border: 1px solid var(--colorSeparatorPrimary);
   border-radius: 12px;
-  transform: rotateX(180deg); // для скролла сверху
+  transform: rotateX(180deg); /* для скролла сверху */
 }
