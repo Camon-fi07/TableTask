@@ -1,0 +1,17 @@
+.skeleton {
+  background: var(--colorSkeleton);
+  background-size: 200%;
+  animation: shimmer 1.5s infinite linear;
+  width: 100px;
+  height: 25px;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}

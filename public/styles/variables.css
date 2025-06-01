@@ -28,6 +28,12 @@ body {
   --colorIconTertiaryAlpha: #0000003d;
   --colorSeparatorPrimaryAlpha: #0000001f;
   --colorSeparatorPrimary: #d7d8d9;
+  --colorSkeleton: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f0f0f0 50%,
+    #e0e0e0 75%
+  );
   --colorBackgroundSecondaryHover: #f0f2f4;
   --colorBackgroundSecondaryActive: #dcdde0;
 }
