@@ -14,5 +14,6 @@
   "message.successCreateUser": "User successfully created",
   "modal.user.create.title": "Create user",
   "validation.required": "Required",
-  "validation.format": "Invalid value format"
+  "validation.format": "Invalid value format",
+  "table.noData": "No data"
 }

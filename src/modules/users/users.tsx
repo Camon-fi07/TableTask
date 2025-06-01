@@ -1,6 +1,7 @@
 import { flexRender } from '@tanstack/react-table';
 import { Loader2Icon } from 'lucide-react';
 
+import { I18nText } from '@/components/I18nText';
 import {
   Table,
   TableBody,
@@ -11,6 +12,7 @@ import {
 } from '@/shared/UI';
 
 import { CreateUserModal } from './components/createUserModal/createUserModal';
+import { COLUMNS } from './users.const';
 import { useUsers } from './users.hooks';
 import styles from './users.module.css';
 
@@ -20,8 +22,6 @@ export const Users = () => {
   return (
     <div className={styles.wrapper}>
       <CreateUserModal />
-      <div>Фильтры</div>
-
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -52,12 +52,14 @@ export const Users = () => {
             ))
           ) : (
             <TableRow>
-              <TableCell>Нет данных.</TableCell>
+              <TableCell colSpan={COLUMNS.length} className={styles.noDataCell}>
+                <I18nText id='table.noData' />
+              </TableCell>
             </TableRow>
           )}
         </TableBody>
       </Table>
-      {getUsersQuery.isLoading && <Loader2Icon className={styles.loader} />}
+      {getUsersQuery.isFetching && <Loader2Icon className={styles.loader} />}
     </div>
   );
 };

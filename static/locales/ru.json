@@ -14,5 +14,6 @@
   "message.successCreateUser": "Пользователь успешно создан",
   "modal.user.create.title": "Создание пользователя",
   "validation.required": "Ожидалось значение",
-  "validation.format": "Неверный формат значения"
+  "validation.format": "Неверный формат значения",
+  "table.noData": "Нет данных"
 }

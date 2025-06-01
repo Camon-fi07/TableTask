@@ -1,5 +1,8 @@
 .wrapper {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @keyframes spin {
@@ -12,4 +15,8 @@
   display: block;
   animation: spin 1s linear infinite;
   margin-inline: auto;
+}
+
+.noDataCell {
+  text-align: center;
 }

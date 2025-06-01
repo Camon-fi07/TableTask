@@ -16,7 +16,7 @@ export const CreateUserModal = () => {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)}>
+      <Button size='large' onClick={() => setIsOpen(true)}>
         <I18nText id='button.user.create' />
       </Button>
       {isOpen && (
