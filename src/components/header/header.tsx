@@ -14,7 +14,7 @@ export const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header data-testid='header' className={styles.header}>
       <h2 className={styles.title}>Table Task</h2>
       <div>
         <Button
