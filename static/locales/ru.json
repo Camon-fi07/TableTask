@@ -1,4 +1,5 @@
 {
+  "logo": "Table Task",
   "fullName": "ФИО",
   "email": "Email",
   "phone": "Телефон",
@@ -6,7 +7,6 @@
   "university": "Университет",
   "grade": "Курс",
   "testScore": "Результат теста",
-  "button.edit": "Редактировать",
   "button.delete": "Удалить",
   "button.user.create": "Создать пользователя",
   "button.create": "Создать",

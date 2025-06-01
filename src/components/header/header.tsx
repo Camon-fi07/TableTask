@@ -4,6 +4,8 @@ import { useContext } from 'react';
 import { I18nContext } from '@/shared/contexts';
 import { Button } from '@/shared/UI';
 
+import { I18nText } from '../I18nText';
+
 import styles from './header.module.css';
 
 export const Header = () => {
@@ -15,7 +17,9 @@ export const Header = () => {
 
   return (
     <header data-testid='header' className={styles.header}>
-      <h2 className={styles.title}>Table Task</h2>
+      <h2 className={styles.title}>
+        <I18nText id='logo' />
+      </h2>
       <div>
         <Button
           className={styles.buttonLang}
