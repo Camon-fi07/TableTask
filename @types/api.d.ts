@@ -4,7 +4,7 @@ interface UserDto {
   email: string;
   city: string;
   phoneNumber: string;
-  grade: string;
+  grade: number;
   university: string;
   testScore?: number;
 }
@@ -24,6 +24,6 @@ interface CreateUserRequestDto {
   email: string;
   city: string;
   phoneNumber: string;
-  grade: string;
+  grade: number;
   university: string;
 }

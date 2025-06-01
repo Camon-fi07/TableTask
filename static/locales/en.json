@@ -15,5 +15,7 @@
   "modal.user.create.title": "Create user",
   "validation.required": "Required",
   "validation.format": "Invalid value format",
-  "table.noData": "No data"
+  "table.noData": "No data",
+  "validation.grade.min": "Minimum 1 grade",
+  "validation.grade.max": "Maximun 4 grade"
 }

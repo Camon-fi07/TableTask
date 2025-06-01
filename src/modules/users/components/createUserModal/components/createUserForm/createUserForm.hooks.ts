@@ -13,7 +13,8 @@ import {
 
 export const useCreateUserForm = (onClose: () => void) => {
   const form = useForm<CreateUserFormFields>({
-    resolver: zodResolver(CREATE_USER_FORM_SCHEMA)
+    resolver: zodResolver(CREATE_USER_FORM_SCHEMA),
+    defaultValues: { phoneNumber: '+7 (', grade: 1 }
   });
   const [isOpen, setIsOpen] = useState(false);
   const postUserCreateMutation = usePostUserCreateMutation();
@@ -32,6 +33,7 @@ export const useCreateUserForm = (onClose: () => void) => {
     handleSubmit,
     errors: form.formState.errors,
     isOpen,
-    toggleIsOpen
+    toggleIsOpen,
+    isPending: postUserCreateMutation.isPending
   };
 };

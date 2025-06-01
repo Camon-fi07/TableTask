@@ -15,5 +15,7 @@
   "modal.user.create.title": "Создание пользователя",
   "validation.required": "Ожидалось значение",
   "validation.format": "Неверный формат значения",
-  "table.noData": "Нет данных"
+  "table.noData": "Нет данных",
+  "validation.grade.min": "Минимум 1 курс",
+  "validation.grade.max": "Максимум 4 курс"
 }

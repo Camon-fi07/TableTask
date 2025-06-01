@@ -2,6 +2,7 @@ import { Controller } from 'react-hook-form';
 import { useIntl } from 'react-intl';
 
 import { I18nText } from '@/components/I18nText';
+import { phoneMask } from '@/shared/helpers/phoneMask';
 import { Button, FormItem, FormMessage, Input, Label } from '@/shared/UI';
 
 import { useCreateUserForm } from './createUserForm.hooks';
@@ -12,7 +13,7 @@ interface CreateUserFormProps {
 }
 
 export const CreateUserForm = ({ onClose }: CreateUserFormProps) => {
-  const { form, errors, handleSubmit } = useCreateUserForm(onClose);
+  const { form, errors, handleSubmit, isPending } = useCreateUserForm(onClose);
   const intl = useIntl();
 
   return (
@@ -42,7 +43,7 @@ export const CreateUserForm = ({ onClose }: CreateUserFormProps) => {
               <Label htmlFor={field.name}>
                 <I18nText id='email' />
               </Label>
-              <Input {...field} />
+              <Input {...field} inputMode='email' />
               <FormMessage>
                 {errors.email &&
                   intl.formatMessage({ id: errors.email.message })}
@@ -58,7 +59,11 @@ export const CreateUserForm = ({ onClose }: CreateUserFormProps) => {
               <Label htmlFor={field.name}>
                 <I18nText id='phone' />
               </Label>
-              <Input {...field} />
+              <Input
+                {...field}
+                inputMode='tel'
+                onChange={(e) => field.onChange(phoneMask(e.target.value))}
+              />
               <FormMessage>
                 {errors.phoneNumber &&
                   intl.formatMessage({ id: errors.phoneNumber.message })}
@@ -106,7 +111,7 @@ export const CreateUserForm = ({ onClose }: CreateUserFormProps) => {
                 <Label htmlFor={field.name}>
                   <I18nText id='grade' />
                 </Label>
-                <Input {...field} />
+                <Input {...field} inputMode='numeric' type='number' />
                 <FormMessage>
                   {errors.grade &&
                     intl.formatMessage({ id: errors.grade.message })}
@@ -117,10 +122,15 @@ export const CreateUserForm = ({ onClose }: CreateUserFormProps) => {
         </div>
       </div>
       <div className={styles.panel}>
-        <Button size='large' type='submit'>
+        <Button size='large' type='submit' disabled={isPending}>
           <I18nText id='button.create' />
         </Button>
-        <Button mode='outline' size='large' onClick={onClose}>
+        <Button
+          mode='outline'
+          size='large'
+          onClick={onClose}
+          disabled={isPending}
+        >
           <I18nText id='button.cancel' />
         </Button>
       </div>
