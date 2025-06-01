@@ -5,6 +5,7 @@
   overflow: hidden;
   height: 36px;
   display: flex;
+  align-items: center;
 }
 
 .wrapper:hover {
