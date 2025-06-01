@@ -54,7 +54,7 @@ export const Users = () => {
               </TableRow>
             ))
           ) : (
-            <TableRow>
+            <TableRow data-testid='no-data-row'>
               <TableCell colSpan={COLUMNS.length} className={styles.noDataCell}>
                 <I18nText id='table.noData' />
               </TableCell>
@@ -63,7 +63,7 @@ export const Users = () => {
         </TableBody>
       </Table>
       {!getUsersQuery.isLoading && getUsersQuery.isFetching && (
-        <Loader2Icon className={styles.loader} />
+        <Loader2Icon data-testid='loader' className={styles.loader} />
       )}
     </div>
   );
