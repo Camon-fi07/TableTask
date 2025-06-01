@@ -16,7 +16,7 @@ export const Default: Story = {
   args: {}
 };
 
-export const EditSize: Story = {
+export const Edited: Story = {
   args: {
     borderRadius: '50%',
     width: 30,

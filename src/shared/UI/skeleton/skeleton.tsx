@@ -5,9 +5,9 @@ import styles from './skeleton.module.css';
 
 interface SkeletonProps {
   width?: CSSProperties['width'];
-  height: CSSProperties['height'];
+  height?: CSSProperties['height'];
   margin?: CSSProperties['margin'];
-  borderRadius: CSSProperties['borderRadius'];
+  borderRadius?: CSSProperties['borderRadius'];
   className?: string;
 }
 
@@ -19,6 +19,7 @@ export const Skeleton = ({
   width
 }: SkeletonProps) => (
   <div
+    data-testid='skeleton'
     className={clsx(styles.skeleton, className)}
     style={{ height, width, margin, borderRadius }}
   />

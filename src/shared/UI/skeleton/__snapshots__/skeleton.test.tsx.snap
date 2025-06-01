@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton should apply css properties 1`] = `
+<div
+  class="skeleton"
+  data-testid="skeleton"
+  style="height: 30px; width: 30px; margin: 10px; border-radius: 50%;"
+/>
+`;
+
+exports[`Skeleton should match snapshot 1`] = `
+<div
+  class="skeleton"
+  data-testid="skeleton"
+/>
+`;
