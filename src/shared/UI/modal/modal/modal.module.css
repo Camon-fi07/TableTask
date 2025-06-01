@@ -67,7 +67,9 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     width: 100%;
+
     animation-name: slideUp;
+    min-width: 100%;
   }
 
   .overlay {
