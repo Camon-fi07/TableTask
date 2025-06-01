@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 
+import { Header } from '@/components/header/header';
 import { Users } from '@/modules/users/users';
 import { I18nContext } from '@/shared/contexts';
 
@@ -9,15 +10,18 @@ export const App = () => {
   const langContext = useContext(I18nContext);
 
   return (
-    <div className={styles.wrapper}>
-      <button
-        onClick={() =>
-          langContext.setLocale(langContext.locale === 'ru' ? 'en' : 'ru')
-        }
-      >
-        Change Language
-      </button>
-      <Users />
+    <div>
+      <Header />
+      <main className={styles.wrapper}>
+        <button
+          onClick={() =>
+            langContext.setLocale(langContext.locale === 'ru' ? 'en' : 'ru')
+          }
+        >
+          Change Language
+        </button>
+        <Users />
+      </main>
     </div>
   );
 };
