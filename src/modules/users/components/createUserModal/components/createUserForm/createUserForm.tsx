@@ -3,17 +3,32 @@ import { useIntl } from 'react-intl';
 
 import { I18nText } from '@/components/I18nText';
 import { phoneMask } from '@/shared/helpers/phoneMask';
-import { Button, FormItem, FormMessage, Input, Label } from '@/shared/UI';
+import {
+  Button,
+  FormItem,
+  FormMessage,
+  Input,
+  Label,
+  Loader
+} from '@/shared/UI';
 
 import { useCreateUserForm } from './createUserForm.hooks';
 import styles from './createUserForm.module.css';
 
 interface CreateUserFormProps {
   onClose: () => void;
+  setIsBlocked: (value: boolean) => void;
 }
 
-export const CreateUserForm = ({ onClose }: CreateUserFormProps) => {
-  const { form, errors, handleSubmit, isPending } = useCreateUserForm(onClose);
+export const CreateUserForm = ({
+  onClose,
+  setIsBlocked
+}: CreateUserFormProps) => {
+  const { form, errors, handleSubmit, isPending } = useCreateUserForm(
+    onClose,
+    setIsBlocked
+  );
+
   const intl = useIntl();
 
   return (
@@ -122,8 +137,14 @@ export const CreateUserForm = ({ onClose }: CreateUserFormProps) => {
         </div>
       </div>
       <div className={styles.panel}>
-        <Button size='large' type='submit' disabled={isPending}>
+        <Button
+          className={styles.createButton}
+          size='large'
+          type='submit'
+          disabled={isPending}
+        >
           <I18nText id='button.create' />
+          {isPending && <Loader />}
         </Button>
         <Button
           mode='outline'

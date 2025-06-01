@@ -14,6 +14,11 @@ import styles from './createUserModal.module.css';
 
 export const CreateUserModal = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isBlocked, setIsBlocked] = useState(false);
+
+  const handleClose = () => {
+    if (!isBlocked) setIsOpen(false);
+  };
 
   return (
     <div>
@@ -25,14 +30,14 @@ export const CreateUserModal = () => {
         <I18nText id='button.user.create' />
       </Button>
       {isOpen && (
-        <Modal onClose={() => setIsOpen(false)}>
+        <Modal onClose={handleClose}>
           <ModalHeader>
             <ModalHeaderTitle>
               <I18nText id='modal.user.create.title' />
             </ModalHeaderTitle>
           </ModalHeader>
           <ModalContent>
-            <CreateUserForm onClose={() => setIsOpen(false)} />
+            <CreateUserForm onClose={handleClose} setIsBlocked={setIsBlocked} />
           </ModalContent>
         </Modal>
       )}

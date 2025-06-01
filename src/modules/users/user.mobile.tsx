@@ -1,8 +1,7 @@
 import { flexRender } from '@tanstack/react-table';
-import { Loader2Icon } from 'lucide-react';
 
 import { I18nText } from '@/components/I18nText';
-import { Table, TableBody, TableCell, TableRow } from '@/shared/UI';
+import { Loader, Table, TableBody, TableCell, TableRow } from '@/shared/UI';
 
 import { CreateUserModal } from './components/createUserModal/createUserModal';
 import { COLUMNS } from './users.const';
@@ -52,7 +51,7 @@ export const UsersMobile = () => {
         </TableBody>
       </Table>
       {!getUsersQuery.isLoading && getUsersQuery.isFetching && (
-        <Loader2Icon data-testid='loader' className={styles.loader} />
+        <Loader isCenter />
       )}
     </div>
   );

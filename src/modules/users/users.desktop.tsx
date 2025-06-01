@@ -1,8 +1,8 @@
 import { flexRender } from '@tanstack/react-table';
-import { Loader2Icon } from 'lucide-react';
 
 import { I18nText } from '@/components/I18nText';
 import {
+  Loader,
   Table,
   TableBody,
   TableCell,
@@ -63,7 +63,7 @@ export const UsersDesktop = () => {
         </TableBody>
       </Table>
       {!getUsersQuery.isLoading && getUsersQuery.isFetching && (
-        <Loader2Icon data-testid='loader' className={styles.loader} />
+        <Loader isCenter />
       )}
     </div>
   );

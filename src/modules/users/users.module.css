@@ -1,20 +1,8 @@
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .wrapper {
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.loader {
-  display: block;
-  animation: spin 1s linear infinite;
-  margin-inline: auto;
 }
 
 .noDataCell {

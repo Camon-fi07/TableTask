@@ -22,3 +22,10 @@
   display: flex;
   gap: 8px;
 }
+
+.createButton {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}

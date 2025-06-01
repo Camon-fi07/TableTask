@@ -1,11 +1,11 @@
 {
   "createUser": {
-    "fullName": "ник ник ник",
-    "city": "321",
-    "grade": "3",
-    "email": "422nikitos244@mail.ru",
-    "phoneNumber": "9236091255",
-    "university": "312"
+    "fullName": "Годже Сатору",
+    "city": "Томск",
+    "grade": 1,
+    "email": "gul@mail.japan",
+    "phoneNumber": "+7 (8888) 888 88 88",
+    "university": "ТГУ"
   },
   "users": {
     "items": [

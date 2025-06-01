@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Input } from '../Input/input';
+import { Input } from '../input/input';
 
 import { Label, LabelProps } from './label';
 

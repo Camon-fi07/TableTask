@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useIntl } from 'react-intl';
 import { toast } from 'sonner';
@@ -11,7 +11,10 @@ import {
   CreateUserFormFields
 } from './createUserForm.const';
 
-export const useCreateUserForm = (onClose: () => void) => {
+export const useCreateUserForm = (
+  onClose: () => void,
+  setIsBlocked: (value: boolean) => void
+) => {
   const form = useForm<CreateUserFormFields>({
     resolver: zodResolver(CREATE_USER_FORM_SCHEMA),
     defaultValues: { phoneNumber: '+7 (', grade: 1 }
@@ -27,6 +30,10 @@ export const useCreateUserForm = (onClose: () => void) => {
     toast.success(intl.formatMessage({ id: 'message.successCreateUser' }));
     onClose();
   });
+
+  useEffect(() => {
+    setIsBlocked(postUserCreateMutation.isPending);
+  }, [postUserCreateMutation.isPending]);
 
   return {
     form,
