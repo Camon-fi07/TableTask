@@ -14,7 +14,8 @@ const stories = [
 for (const story of stories) {
   test(`skeleton ${story.name} should match screenshot`, async ({ page }) => {
     await page.goto(
-      `http://localhost:6006/?path=/story/ui-skeleton--${story.id}`
+      `http://localhost:6006/?path=/story/ui-skeleton--${story.id}`,
+      { waitUntil: 'domcontentloaded' }
     );
 
     const frame = page

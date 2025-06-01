@@ -9,7 +9,10 @@ const stories = [
 
 for (const story of stories) {
   test(`table ${story.name} should match screenshot`, async ({ page }) => {
-    await page.goto(`http://localhost:6006/?path=/story/ui-table--${story.id}`);
+    await page.goto(
+      `http://localhost:6006/?path=/story/ui-table--${story.id}`,
+      { waitUntil: 'domcontentloaded' }
+    );
 
     const frame = page
       .locator('iframe[title="storybook-preview-iframe"]')
