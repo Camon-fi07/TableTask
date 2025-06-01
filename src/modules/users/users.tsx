@@ -15,6 +15,7 @@ import { CreateUserModal } from './components/createUserModal/createUserModal';
 import { COLUMNS } from './users.const';
 import { useUsers } from './users.hooks';
 import styles from './users.module.css';
+import { TableUsersSkeleton } from './users.skeleton';
 
 export const Users = () => {
   const { getUsersQuery, table } = useUsers();
@@ -40,7 +41,9 @@ export const Users = () => {
           ))}
         </TableHeader>
         <TableBody>
-          {table.getRowModel().rows?.length ? (
+          {getUsersQuery.isLoading ? (
+            <TableUsersSkeleton />
+          ) : table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
               <TableRow key={row.id}>
                 {row.getVisibleCells().map((cell) => (
@@ -59,7 +62,9 @@ export const Users = () => {
           )}
         </TableBody>
       </Table>
-      {getUsersQuery.isFetching && <Loader2Icon className={styles.loader} />}
+      {!getUsersQuery.isLoading && getUsersQuery.isFetching && (
+        <Loader2Icon className={styles.loader} />
+      )}
     </div>
   );
 };
