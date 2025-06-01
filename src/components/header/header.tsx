@@ -23,7 +23,7 @@ export const Header = () => {
           onClick={toggleLang}
         >
           <GlobeIcon />
-          <span>{locale === 'ru' ? 'EN' : 'RU'}</span>
+          <span>{locale === 'ru' ? 'RU' : 'EN'}</span>
         </Button>
       </div>
     </header>

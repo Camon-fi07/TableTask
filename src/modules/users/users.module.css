@@ -1,14 +1,14 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .wrapper {
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .loader {
@@ -19,4 +19,21 @@
 
 .noDataCell {
   text-align: center;
+}
+
+.tableCellMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.tableCellMobileItem {
+  display: flex;
+  gap: 2px;
+}
+
+.tableCellMobileItemLabel {
+  font-weight: 600;
 }

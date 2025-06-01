@@ -12,3 +12,14 @@ export const TableUsersSkeleton = () =>
       ))}
     </TableRow>
   ));
+
+export const TableUsersMobileSkeleton = () =>
+  [...new Array(5)].map((_, index) => (
+    <TableRow data-testid='skeleton-row' key={index}>
+      <TableCell>
+        {[...new Array(COLUMNS.length)].map((_, index) => (
+          <Skeleton key={index} height={10} width='100%' />
+        ))}
+      </TableCell>
+    </TableRow>
+  ));

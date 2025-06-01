@@ -10,13 +10,18 @@ import {
 } from '@/shared/UI';
 
 import { CreateUserForm } from './components/createUserForm/createUserForm';
+import styles from './createUserModal.module.css';
 
 export const CreateUserModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
-      <Button size='large' onClick={() => setIsOpen(true)}>
+      <Button
+        className={styles.createButton}
+        size='large'
+        onClick={() => setIsOpen(true)}
+      >
         <I18nText id='button.user.create' />
       </Button>
       {isOpen && (
